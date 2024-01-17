@@ -12,6 +12,7 @@ const Project = ({ data }) => {
       <div className={card}>
         <h3 className={projTitle}>{project.titel}</h3>
         <p>{project.subtitel}</p>
+
         <div>
           <img
             src={project.image1.file.url}
@@ -26,6 +27,14 @@ const Project = ({ data }) => {
             />
           )}
         </div>
+        <a
+          href={project.lnk}
+          target="_blank"
+          rel="noopener noreferrer"
+          // style={{ display: "none" }}
+        >
+          {project.lnk}
+        </a>
         {project.beskrivning && project.beskrivning.raw && (
           <div>
             {documentToReactComponents(JSON.parse(project.beskrivning.raw))}
@@ -58,6 +67,7 @@ export const pageQuery = graphql`
       kommentar {
         raw
       }
+      lnk
     }
   }
 `;

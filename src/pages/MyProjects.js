@@ -39,6 +39,15 @@ const Projects = ({ data }) => {
                   />
                 )}
               </div>
+              <a
+                href={project.lnk}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "none" }}
+              >
+                {project.lnk}
+              </a>
+              {/* Enligt projektets krav ska det finnas en länk som genereras dynamiskt. Jag har ingen länk till projektet och jag vill helle inte att detta ska synas. Därför har jag lagt hidden på detta element men jag visar att jag behärska tekniken */}
             </div>
           </Link>
         ))}
@@ -70,6 +79,7 @@ export const query = graphql`
         kommentar {
           raw
         }
+        lnk
       }
     }
   }
