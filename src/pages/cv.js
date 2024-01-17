@@ -1,34 +1,48 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Layout from "../components/Layout";
+import React from "react";
+import { graphql, Link } from "gatsby";
+// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+// import Layout from "../components/Layout";
 import CvHeaderSection from "../components/CvHeaderComponent";
 import CvContactSection from "../components/CvContactComponent";
 import CvWorkSection from "../components/CvWorkComponent";
 import CvEducationSection from "../components/CvEducationComponent";
 
-import { profileImage } from "../styles/cv.module.css";
+import {
+  profileImage,
+  cvHeader,
+  cvMain,
+  cvAside,
+  cvArticles,
+} from "../styles/cv.module.css";
 
 const CvHeader = ({ data }) => {
   const kontakt = data.kontakt.nodes[0];
+  const kompetenserNodes = data.kompetenser.nodes;
 
   return (
     // <Layout>
     <section>
-      {/* Row 1 */}
-      <div>
+      <div id={cvHeader}>
+        <Link to="/">
+          <p>Tillbaka hem</p>
+        </Link>
         <CvHeaderSection kontakt={kontakt} />
       </div>
-
-      {/* Row 2 */}
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        {/* Column 1 */}
-        <div style={{ flex: 1 }}>
-          <CvContactSection kontakt={kontakt} />
+      <div>
+        <img
+          className={profileImage}
+          src={kontakt.image.file.url}
+          alt={kontakt.namn}
+        />
+      </div>
+      <div id={cvMain}>
+        <div id={cvAside}>
+          <CvContactSection
+            kontakt={kontakt}
+            kompetenserNodes={kompetenserNodes}
+          />
         </div>
-
-        {/* Column 2 */}
-        <div style={{ flex: 1 }}>
+        <div id={cvArticles}>
           <CvWorkSection data={data} />
           <CvEducationSection data={data} />
         </div>
@@ -75,6 +89,15 @@ export const query = graphql`
         skola
         utbildning
         datum
+        beskrivning {
+          raw
+        }
+      }
+    }
+
+    kompetenser: allContentfulKompetenser {
+      nodes {
+        titel
         beskrivning {
           raw
         }

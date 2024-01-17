@@ -1,7 +1,7 @@
 // ProjectPosts.js
 import React from "react";
 import { graphql } from "gatsby";
-import { card, cardContainer } from "../styles/projekt.module.css";
+import { card, projTitle } from "../styles/projekt.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/Layout";
 
@@ -10,7 +10,7 @@ const Project = ({ data }) => {
   return (
     <Layout>
       <div className={card}>
-        <h1>{project.titel}</h1>
+        <h3 className={projTitle}>{project.titel}</h3>
         <p>{project.subtitel}</p>
         <div>
           <img

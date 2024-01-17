@@ -1,7 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
-import { card, cardContainer } from "../styles/projekt.module.css";
+import {
+  card,
+  cardContainer,
+  projTitle,
+  projLink,
+} from "../styles/projekt.module.css";
 
 const Projects = ({ data }) => {
   const projectsNodes = data.allContentfulProjekt.nodes;
@@ -16,26 +21,26 @@ const Projects = ({ data }) => {
     <Layout>
       <div className={cardContainer}>
         {projectsNodes.map((project, index) => (
-          <div key={index} className={card}>
-            <h1>
-              <Link to={`/${project.slug}`}>{project.titel}</Link>
-            </h1>
-            <p>{project.subtitel}</p>
-            <div>
-              <img
-                src={project.image1.file.url}
-                alt={project.namn}
-                style={{ width: "100px", height: "100px" }}
-              />
-              {project.image2 && project.image2.file && (
+          <Link key={index} to={`/${project.slug}`} className={projLink}>
+            <div className={card}>
+              <h3 className={projTitle}>{project.titel}</h3>
+              <p>{project.subtitel}</p>
+              <div>
                 <img
-                  src={project.image2.file.url}
+                  src={project.image1.file.url}
                   alt={project.namn}
                   style={{ width: "100px", height: "100px" }}
                 />
-              )}
+                {project.image2 && project.image2.file && (
+                  <img
+                    src={project.image2.file.url}
+                    alt={project.namn}
+                    style={{ width: "100px", height: "100px" }}
+                  />
+                )}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </Layout>

@@ -3,15 +3,15 @@ import * as React from "react";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 // import { Link } from "gatsby";
 import Layout from "../components/Layout";
-import { mainSection } from "../styles/home.module.css";
+import "../styles/home.module.css";
 
 const Home = ({ data }) => {
   const om = data.allContentfulOm.nodes[0];
   return (
     <Layout>
-      <section className={mainSection}>
-        <h1>{om.titel}</h1>
-        <h3>{om.subtitel}</h3>
+      <section>
+        <h3>{om.titel}</h3>
+        <h4>{om.subtitel}</h4>
       </section>
     </Layout>
   );

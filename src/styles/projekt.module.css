@@ -1,8 +1,7 @@
-/* .cardContainer {
+.cardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
-  border: 1px solid #ec0b0b;
 }
 
 .card {
@@ -16,4 +15,14 @@
 
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} */
+}
+
+.projTitle {
+  color: #b98c04;
+  text-decoration: none;
+}
+
+.projLink {
+  text-decoration: none;
+  color: black;
+}

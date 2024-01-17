@@ -2,22 +2,14 @@ import React from "react";
 import { graphql } from "gatsby";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/Layout";
-import {
-  HomeContainer,
-  bodyStyle,
-  HomeSection,
-  HomeDiv,
-  profileImage,
-  SymbolContainer,
-  symbolText,
-} from "../styles/test.module.css";
+import { cvAsideContainer, profileImage } from "../styles/cv.module.css";
 
 const Contact = ({ data }) => {
   const om = data.allContentfulOm.nodes[0];
   return (
     <Layout>
-      <main className={HomeContainer}>
-        <section className={HomeSection}>
+      <main>
+        <section>
           <div>
             <img
               className={profileImage}
@@ -25,13 +17,11 @@ const Contact = ({ data }) => {
               alt={om.namn}
             />
           </div>
-          <div className={HomeDiv}>
+
+          <div className={cvAsideContainer}>
             <p>{om.lder}</p>
             <p>{om.linkedIn}</p>
             <p>{om.email}</p>
-          </div>
-          <div className={SymbolContainer}>
-            <p className={symbolText}>Hem</p>
           </div>
         </section>
       </main>
@@ -63,5 +53,3 @@ export const query = graphql`
 `;
 
 export default Contact;
-
-document.body.classList.add(bodyStyle);

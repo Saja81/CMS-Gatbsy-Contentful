@@ -5,11 +5,9 @@ import { useState } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import {
   cvArbeteContainer,
-  company,
-  title,
-  date,
-  komp,
   readMoreButton,
+  cvArticlesMain,
+  date,
 } from "../styles/cv.module.css";
 
 const CvWorkSection = ({ data }) => {
@@ -23,12 +21,12 @@ const CvWorkSection = ({ data }) => {
     }));
   };
   return (
-    <div>
-      <h1>Arbetslivserfarenhet</h1>
+    <div className={cvArticlesMain}>
+      <h3>Arbetslivserfarenhet</h3>
       {arbeteNodes.map((arbete, index) => (
         <div key={index} className={cvArbeteContainer}>
-          <h1 className={company}>{arbete.fretag}</h1>
-          <h2 className={title}>{arbete.titel}</h2>
+          <h4>{arbete.fretag}</h4>
+          <h5>{arbete.titel}</h5>
           <p className={date}>
             {arbete.startdatum} - {arbete.slutdatum ?? "Nuvarande"}
           </p>
@@ -39,22 +37,22 @@ const CvWorkSection = ({ data }) => {
               <p>
                 {documentToReactComponents(JSON.parse(arbete.beskrivning.raw))}
               </p>
-              <p
+              <button
                 className={readMoreButton}
                 onClick={() => toggleDescription(index)}
               >
                 Läs mindre
-              </p>
+              </button>
             </div>
           ) : (
-            <p
+            <button
               className={readMoreButton}
               onClick={() => toggleDescription(index)}
             >
               Läs mer
-            </p>
+            </button>
           )}
-          <p className={komp}>{arbete.kompetenser}</p>
+          <p>{arbete.kompetenser}</p>
         </div>
       ))}
     </div>
