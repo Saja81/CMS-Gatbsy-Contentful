@@ -1,0 +1,95 @@
+{
+  "Arbetslivserfarenhet": [
+    {
+      "title": "Administratör",
+      "employer": "Aleris sjukvård AB",
+      "date": "Okt 2018 - Aug 2022",
+      "description": "Administratör med ansvar för fakturering och bokningar av hälsokontroller till ca 100 företag och dess personal. Receptionist med fokus på service och kundbemötande. Erhållit god kunskap i journalsystem."
+    },
+    {
+      "title": "Driftsamordnare",
+      "employer": "Beach Center",
+      "date": "Sep 2011 – Sep 2018",
+      "description": "Samordnare av den dagliga driften i reception samt lokalvård. Ta fram rutiner och skriva styrdokument. Arbetsledning, upplärning och schemaplanering Fakturering och viss bokföring. Erhållit mycket goda kunskaper i administrationsverktyget BRP Systems."
+    }
+  ],
+
+  "Utbildning": [
+    {
+      "title": "Frontendutvecklare",
+      "school": "IT-Högskolan",
+      "date": "2022 – 2024",
+      "description": "Nuvarande utbildning, se kompetenser - programmering för mer info"
+    },
+    {
+      "title": "Idrottsvetenskap - Hälsopromotion",
+      "school": "Göteborgs Universitet",
+      "date": "2006 – 2009",
+      "degree": "Kandidatexamen",
+      "description": "Idrottsvetenskap, kost och näringslära, träningslära, anatomy och fysiologi, hälsopsykologi, motivation, motiverande samtal. "
+    }
+  ],
+
+  "Fortroendeuppdrag": [
+    {
+      "title": "Sekreterare och antidopingansvarig",
+      "employer": "Göteborg Kraftsportklubb",
+      "date": "Mar 2019 - Mar 2021",
+      "description": "Som sekreterare ansvarar jag för att ta fram dagordning och skriva mötesprotokoll. Jag svarar på mail, kommunicerar med medlemmar och sköter vårt medlemsregister. Utöver detta behåller jag min roll som antidopingansvarig men nu på föreningsnivå. Att vara engagerad i den ideella idrotten blir lite vad du gör det till. Det finns inga fasta rutiner att gå efter utan du förväntas att tillsammans med övriga styrelsemedlemmar driva föreningen framåt på det sättet du finner bäst - något som ställer höga krav på engagemang och motivation. Jag tycker att det är fantastiskt roligt, samtidigt är det synd att det bara är ett ideellt arbete - hade jag kunnat hade jag gärna jobbat med att driva en förening på heltid! "
+    },
+
+    {
+      "title": "Ordförande",
+      "employer": "Svenska Styrkelyftförbundets Antidopningkommitté",
+      "date": "Apr 2016 - Apr 2017",
+      "description": "Kommittén bestod av en representant från varje distrikt i Sverige (8 stycken). Jag valdes som ordförande i en tid då gruppen var ny. Min roll - med stöttning från sportchefen - bestod framförallt av att samordna arbetet samt sammankalla och planera våra möten. Under min tid arbetade vi hårt med att uppmana Sveriges föreningar att genomföra projektet Vaccinera klubben mot doping. Detta projekt består av en utbildningsdel för föreningens styrelse, utbildningen ska resultera i en skriftlig handlingsplan mot doping. Med hjälp av ett gott samarbete resulterade detta i att Svenska Styrkelyftförbundet då jag lämnade över min roll hade flest antal vaccinerade klubbar av Sveriges totalt 75 specialidrottsförbund. "
+    },
+
+    {
+      "title": "Styrelseledamot och antidopingansvarig",
+      "employer": "Västra Götalands Styrkelyftförbund",
+      "date": "Apr 2016 - April 2018",
+      "description": "Som antidopingansvarig arbetade jag med nätverkande samt informationsspridning till förbundets föreningar. "
+    }
+  ],
+
+  "Kompetenser": {
+    "Programmering": [
+      "HTML & CSS",
+      "JavaScript",
+      "Vue",
+      "Node.js",
+      "Vite",
+      "UX Design",
+      "Agil utveckling",
+      "Figma",
+      "React",
+      "Typescript",
+      "SQL"
+    ],
+    "Administrationssystem": [
+      "BRP Systems",
+      "CGMJ4",
+      "Web Doc",
+      "Idrott Online",
+      "Visma",
+      "Fortnox"
+    ],
+    "Coaching": [
+      "Lic. Personlig Tränare",
+      "Ledarskap",
+      "Pedagogik",
+      "Tävlingsledare",
+
+      "Motiverande samtal"
+    ],
+    "Ekonomi": ["Fakturering", "Bokföring"]
+  },
+  "Ovrigt": [
+    "Engelska: flytande",
+    "Spanska: grundläggande",
+    "Referenser: lämnas på begäran",
+    "B-Körkort",
+    "Svensk mästare i Bänkpress 2023"
+  ]
+}
