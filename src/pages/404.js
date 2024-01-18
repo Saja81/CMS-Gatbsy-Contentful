@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
-import CategoryList from "./CategoryList";
+import { graphql, Link } from "gatsby";
+import Search from "../components/search";
 
 const NotFound = ({ data }) => {
   return (
@@ -9,7 +9,7 @@ const NotFound = ({ data }) => {
       <div>
         <h2>404</h2>
         <p>Sorry, that page doesn't exist (yet)!</p>
-        {/* <CategoryList data={data} /> */}
+        <Search searchIndex={data.siteSearchIndex.index} />
         <Link
           to="/"
           style={{
@@ -24,5 +24,13 @@ const NotFound = ({ data }) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query MyQuery {
+    siteSearchIndex {
+      index
+    }
+  }
+`;
 
 export default NotFound;

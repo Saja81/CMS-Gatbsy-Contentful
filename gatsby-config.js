@@ -19,7 +19,6 @@ module.exports = {
         name: "CV",
         link: "/cv",
       },
-
       {
         name: "Mina Projekt",
         link: "/MyProjects",
@@ -43,6 +42,7 @@ module.exports = {
             // Observera att jag ändrade från ContentfulPost till ContentfulProjekt
             titel: (node) => node.titel,
             subtitel: (node) => node.subtitel,
+            slug: (node) => node.slug,
           },
         },
       },
