@@ -7,6 +7,7 @@ import CvContactSection from "../components/CvContactComponent";
 import CvWorkSection from "../components/CvWorkComponent";
 import CvEducationSection from "../components/CvEducationComponent";
 import { Helmet } from "react-helmet";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   profileImage,
@@ -37,10 +38,11 @@ const CvHeader = ({ data }) => {
         <CvHeaderSection kontakt={kontakt} />
       </div>
       <div>
-        <img
+        <GatsbyImage
           className={profileImage}
-          src={kontakt.image.file.url}
-          alt={kontakt.namn}
+          image={getImage(kontakt.image.gatsbyImageData)}
+          alt={kontakt.image.title || ""}
+          style={{ maxWidth: "50%" }}
         />
       </div>
       <div id={cvMain}>
@@ -71,9 +73,7 @@ export const query = graphql`
         mail
         telefonnummer
         image {
-          file {
-            url
-          }
+          gatsbyImageData
         }
       }
     }

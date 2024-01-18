@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/Layout";
 import { cvAsideContainer, profileImage } from "../styles/cv.module.css";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Contact = ({ data }) => {
   const om = data.allContentfulOm.nodes[0];
@@ -11,10 +12,11 @@ const Contact = ({ data }) => {
       <main>
         <section>
           <div>
-            <img
+            <GatsbyImage
               className={profileImage}
-              src={om.image.file.url}
-              alt={om.namn}
+              image={getImage(om.image.gatsbyImageData)}
+              alt={om.image.title || ""}
+              style={{ maxWidth: "50%" }}
             />
           </div>
 
@@ -36,9 +38,7 @@ export const query = graphql`
         titel
         subtitel
         image {
-          file {
-            url
-          }
+          gatsbyImageData
         }
         lder
         telefon

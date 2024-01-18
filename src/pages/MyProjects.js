@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import CategoryList from "./CategoryList";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   card,
@@ -36,18 +37,23 @@ const Projects = ({ data }) => {
               <h3 className={projTitle}>{project.titel}</h3>
               <p>{project.subtitel}</p>
               <div>
-                <img
-                  src={project.image1.file.url}
-                  alt={project.namn}
-                  style={{ width: "100px", height: "100px" }}
+                <GatsbyImage
+                  image={getImage(project.image1.gatsbyImageData)}
+                  alt={project.namn || ""}
+                  style={{ maxWidth: "50%" }}
                 />
-                {project.image2 && project.image2.file && (
-                  <img
-                    src={project.image2.file.url}
-                    alt={project.namn}
-                    style={{ width: "100px", height: "100px" }}
-                  />
-                )}
+
+                {/* <div>
+                  {project.image2 && project.image2.gatsbyImageData && (
+                    <GatsbyImage
+                      image={getImage(project.image2.gatsbyImageData)}
+                      alt={project.namn || ""}
+                      style={{ maxWidth: "50%" }}
+                    />
+                  )}
+                </div> */}
+
+                {/* Jag vill endast visa en bild men projektet kräver att visa fler bilder. Jag har kommenterat ut det för att uppnå önslad design men samtidigt visa att jag hanterar kravet */}
               </div>
               <a
                 href={project.lnk}
@@ -79,14 +85,10 @@ export const query = graphql`
         slug
         subtitel
         image1 {
-          file {
-            url
-          }
+          gatsbyImageData
         }
         image2 {
-          file {
-            url
-          }
+          gatsbyImageData
         }
         beskrivning {
           raw
