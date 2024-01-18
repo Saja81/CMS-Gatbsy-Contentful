@@ -6,6 +6,7 @@ import CvHeaderSection from "../components/CvHeaderComponent";
 import CvContactSection from "../components/CvContactComponent";
 import CvWorkSection from "../components/CvWorkComponent";
 import CvEducationSection from "../components/CvEducationComponent";
+import { Helmet } from "react-helmet";
 
 import {
   profileImage,
@@ -22,6 +23,13 @@ const CvHeader = ({ data }) => {
   return (
     // <Layout>
     <section>
+      <Helmet>
+        <title>CV - Frontendutvecklare</title>
+        <meta
+          name="description"
+          content="Utforska mitt CV och mina erfarenheter inom administration, reception, ledarskap och frontendutveckling. Jag har tidigare arbetat som driftsamordnare, administratör, receptionist och föreningssekreterare. Mina kompetenser inkluderar administration, reception, ledarskap, BRP Systems, samordning, coaching, evenemangsplanering och journalsystemet Webdoc."
+        />
+      </Helmet>
       <div id={cvHeader}>
         <Link to="/">
           <p>Tillbaka hem</p>

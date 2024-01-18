@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet";
 import CategoryList from "./CategoryList";
 
 import {
@@ -21,6 +22,13 @@ const Projects = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Projektöversikt - Frontendutveckling på IT-Högskolan</title>
+        <meta
+          name="description"
+          content="Utforska mina projekt skapade under min frontendutbildning på IT-Högskolan. Se projekt inom HTML & CSS, Native JavaScript, React, Vue, samt Fullstack inklusive databaser."
+        />
+      </Helmet>
       <div className={cardContainer}>
         {projectsNodes.map((project, index) => (
           <Link key={index} to={`/${project.slug}`} className={projLink}>
