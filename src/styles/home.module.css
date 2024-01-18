@@ -1,0 +1,65 @@
+.space {
+  background-color: #222222;
+  height: 100px;
+  margin: 0;
+}
+
+#homeContainer {
+  background-color: #222222;
+  color: #b98c04;
+  height: 100%;
+}
+#homeInnerContainer {
+  margin: 0 5%;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #b98c04, orange, silver);
+  border-image-slice: 1;
+}
+
+#homeMainSection {
+  display: flex;
+  justify-content: center; /* Centrera innehållet horisontellt */
+  align-items: center; /* Centrera innehållet vertikalt */
+  margin: 10%;
+  gap: 10%;
+}
+
+#homeInfo {
+  flex-basis: 80%;
+}
+
+#homeNav {
+  flex-basis: 20%;
+}
+
+#homeNav nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#homeNav a {
+  text-decoration: none;
+
+  transition: color 0.3s, font-size 0.3s; /* Mjuk övergång på färg och textstorlek */
+}
+
+#homeNav a:hover {
+  color: silver; /* Färg vid hover */
+  font-size: 1.1em; /* Ökad textstorlek vid hover */
+}
+
+/* .cvAsideContainer {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(218, 196, 196, 0.747);
+  transition: box-shadow 0.3s ease;
+} */
+
+.profileImage {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #b98c04;
+}
+
+/* Lägg till önskad styling för övriga element om det behövs */

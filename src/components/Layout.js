@@ -18,6 +18,19 @@ export default function Layout({ children }) {
       }
     }
   `);
+
+  // const data = useStaticQuery(graphql`
+  //   query MyQuery {
+  //     allContentfulNavigation {
+  //       nodes {
+  //         lnk
+  //         namn
+  //       }
+  //     }
+  //   }
+  // `);
+
+  // const menuLinks = data.allContentfulNavigation.nodes;
   return (
     <body className="body">
       <header className="mainheader">
@@ -27,6 +40,13 @@ export default function Layout({ children }) {
             <Link to={link.link}>{link.name}</Link>
           ))}
         </nav>
+        {/* <nav>
+          {menuLinks.map((link) => (
+            <Link to={link.lnk} key={link.lnk}>
+              {link.namn}
+            </Link>
+          ))}
+        </nav> */}
       </header>
 
       <main>{children}</main>

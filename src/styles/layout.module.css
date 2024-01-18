@@ -37,6 +37,7 @@ nav a {
   color: #b98c04;
   flex-direction: row;
   padding: 5px;
+  text-decoration: none;
 }
 
 footer p {

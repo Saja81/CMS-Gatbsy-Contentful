@@ -1,33 +1,62 @@
-import React from "react";
-import { graphql } from "gatsby";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Layout from "../components/Layout";
-import { cvAsideContainer, profileImage } from "../styles/cv.module.css";
+import { graphql, Link } from "gatsby";
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
+import LayoutTwo from "../components/LayoutTwo";
+
+import {
+  homeMainSection,
+  homeInfo,
+  homeNav,
+  homeContainer,
+  homeInnerContainer,
+  cvAsideContainer,
+  profileImage,
+} from "../styles/home.module.css";
+
+// import { cvAsideContainer, profileImage } from "../styles/cv.module.css";
 
 const Contact = ({ data }) => {
   const om = data.allContentfulOm.nodes[0];
   return (
-    <Layout>
-      <main>
-        <section>
-          <div>
-            <GatsbyImage
-              className={profileImage}
-              image={getImage(om.image.gatsbyImageData)}
-              alt={om.image.title || ""}
-              style={{ maxWidth: "50%" }}
-            />
-          </div>
+    <LayoutTwo>
+      <section id={homeContainer}>
+        <Helmet>
+          <title>
+            Frontendutveckling med headless CMS på IT-Högskolan i Göteborg
+          </title>
+          <meta
+            name="description"
+            content="Utforska mina projekt skapade under min utbildning på IT-Högskolan i Göteborg. En projektsida skapad i en kurs för headless CMS."
+          />
+        </Helmet>
 
-          <div className={cvAsideContainer}>
-            <p>{om.lder}</p>
-            <p>{om.linkedIn}</p>
-            <p>{om.email}</p>
+        <div id={homeInnerContainer}>
+          <Link style={{ color: "#b98c04", textDecoration: "none" }} to="/">
+            <p>Tillbaka hem</p>
+          </Link>
+          <div id={homeMainSection}>
+            <div id={homeInfo}>
+              <GatsbyImage
+                className={profileImage}
+                image={getImage(om.image.gatsbyImageData)}
+                alt={om.image.title || ""}
+                style={{ maxWidth: "50%" }}
+              />
+            </div>
+            <div id={homeNav}>
+              <div className={cvAsideContainer}>
+                <p>{om.lder}</p>
+                <p>{om.linkedIn}</p>
+                <p>{om.email}</p>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
-    </Layout>
+        </div>
+      </section>
+    </LayoutTwo>
   );
 };
 
