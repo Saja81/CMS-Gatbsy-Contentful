@@ -28,6 +28,9 @@ const CategoryList = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
+    siteSearchIndex {
+      index
+    }
     allContentfulProjekt {
       nodes {
         kategori
