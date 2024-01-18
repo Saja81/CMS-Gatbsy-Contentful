@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
+  cvMainContainer,
   profileImage,
   cvHeader,
   cvMain,
@@ -23,7 +24,7 @@ const CvHeader = ({ data }) => {
 
   return (
     // <Layout>
-    <section>
+    <section id={cvMainContainer}>
       <Helmet>
         <title>CV - Frontendutvecklare</title>
         <meta

@@ -2,13 +2,16 @@ body {
   background-color: silver;
 }
 
+#cvMainContainer {
+  position: relative;
+}
+
 #cvHeader {
   display: flex;
   background-color: #242e38;
   color: #b98c04;
   justify-content: center;
   padding: 2% 0% 2% 0%;
-  position: relative;
 }
 
 #cvHeader p {
@@ -42,9 +45,10 @@ body {
   height: 140px;
   border: 2px solid #222222;
   position: absolute;
-  top: 15%;
+  top: 5%;
   right: 80%;
 }
+
 .cvAsideMain {
   display: flex;
   flex-direction: column;
@@ -101,7 +105,41 @@ body {
   text-decoration: none;
   display: inline;
 }
-
-/* .readMoreButton:hover {
-  color: rgb(102, 101, 101);
+/* @media (max-width: 576px) {
+  .profileImage {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #222222;
+    position: static;
+    margin: 0 auto;
+  }
 } */
+
+@media (max-width: 768px) {
+  /* Add styles for medium screen size and below */
+
+  #cvMain {
+    flex-direction: column;
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #222222;
+    position: absolute;
+    top: 3%;
+    right: 80%;
+  }
+
+  #cvAside,
+  #cvArticles {
+    margin: 5% 3% 2% 3%; /* Adjust margins for better spacing in a single column layout */
+  }
+
+  #cvHeader p {
+    position: static; /* Change the position to static for normal flow */
+    text-align: center; /* Center the text */
+    margin-top: 1%; /* Adjust margin as needed */
+    margin-right: 0; /* Reset right margin */
+  }
+}
