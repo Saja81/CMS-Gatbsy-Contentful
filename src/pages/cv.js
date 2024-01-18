@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/Layout";
 import CvHeaderSection from "../components/CvHeaderComponent";
@@ -33,9 +33,6 @@ const CvHeader = ({ data }) => {
           />
         </Helmet>
         <div id={cvHeader}>
-          <Link to="/">
-            <p>Tillbaka hem</p>
-          </Link>
           <CvHeaderSection kontakt={kontakt} />
         </div>
         <div>
