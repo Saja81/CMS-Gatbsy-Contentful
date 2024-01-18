@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
+import CategoryList from "./CategoryList";
+
 import {
   card,
   cardContainer,
@@ -51,6 +53,8 @@ const Projects = ({ data }) => {
             </div>
           </Link>
         ))}
+
+        <CategoryList data={data} />
       </div>
     </Layout>
   );
@@ -58,6 +62,9 @@ const Projects = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
+    siteSearchIndex {
+      index
+    }
     allContentfulProjekt {
       nodes {
         titel
@@ -80,6 +87,7 @@ export const query = graphql`
           raw
         }
         lnk
+        kategori
       }
     }
   }

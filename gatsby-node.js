@@ -1,6 +1,7 @@
 // gatsby-node.js
 
 const path = require("path");
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
@@ -14,6 +15,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         nodes {
           titel
           slug
+          kategori
         }
       }
     }
@@ -36,6 +38,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: projectTemplate,
         context: {
           slug: project.slug,
+        },
+      });
+
+      createPage({
+        path: `/${project.kategori.toLowerCase()}/`, // Lägg till kategori i sökvägen
+        component: projectTemplate,
+        context: {
+          slug: project.slug,
+          kategori: project.kategori, // Skicka med kategorin som en del av context
         },
       });
     });

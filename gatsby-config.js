@@ -19,10 +19,7 @@ module.exports = {
         name: "CV",
         link: "/cv",
       },
-      {
-        name: "Om mig",
-        link: "/about",
-      },
+
       {
         name: "Mina Projekt",
         link: "/MyProjects",
@@ -34,6 +31,23 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fält att indexera
+        fields: ["titel", "subtitel", "slug"],
+
+        // Hur man löser varje fälts värde för en understödd nodtyp
+        resolvers: {
+          ContentfulProjekt: {
+            // Observera att jag ändrade från ContentfulPost till ContentfulProjekt
+            titel: (node) => node.titel,
+            subtitel: (node) => node.subtitel,
+          },
+        },
+      },
+    },
+
     {
       resolve: "gatsby-source-contentful",
       options: {

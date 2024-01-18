@@ -23,11 +23,6 @@ export default function Layout({ children }) {
       <header className="mainheader">
         <h1 className="logo">Sandra Jakobsson</h1>
         <nav>
-          {/* <Link to="/">Hem</Link>
-        <Link to="/cv">CV</Link>
-        <Link to="/about">Om mig</Link>
-        <Link to="/MyProjects">Mina projekt</Link>
-        <Link to="/contact">Kontakt</Link> */}
           {data.site.siteMetadata.menuLinks.map((link) => (
             <Link to={link.link}>{link.name}</Link>
           ))}
