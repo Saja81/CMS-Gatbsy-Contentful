@@ -21,6 +21,8 @@ const Projects = ({ data }) => {
     return titleA - titleB;
   });
 
+  // Sorrteringsfunktion för att få mina projekt i ordning enligt titlar.
+
   return (
     <Layout>
       <Helmet>
