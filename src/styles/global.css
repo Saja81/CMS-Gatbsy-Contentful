@@ -25,7 +25,7 @@ footer {
 
 header,
 footer {
-  background-color: #242e38;
+  background-color: #222222;
 }
 
 .logo {
@@ -37,6 +37,25 @@ nav a {
   color: #b98c04;
   flex-direction: row;
   padding: 5px;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+
+  transition: color 0.3s, font-size 0.3s; /* Mjuk övergång på färg och textstorlek */
+}
+
+nav a:hover {
+  color: silver; /* Färg vid hover */
+  font-size: 1.1em; /* Ökad textstorlek vid hover */
+}
+
+nav a {
+  color: #b98c04;
+  flex-direction: row;
+  padding: 5px;
+  text-decoration: none;
 }
 
 footer p {

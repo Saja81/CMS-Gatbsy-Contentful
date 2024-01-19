@@ -37,16 +37,16 @@
   flex-direction: column;
 }
 
-#homeNav a {
+/* #homeNav a {
   text-decoration: none;
 
-  transition: color 0.3s, font-size 0.3s; /* Mjuk övergång på färg och textstorlek */
+  transition: color 0.3s, font-size 0.3s;
 }
 
 #homeNav a:hover {
-  color: silver; /* Färg vid hover */
-  font-size: 1.1em; /* Ökad textstorlek vid hover */
-}
+  color: silver;
+  font-size: 1.1em;
+} */
 
 /* .cvAsideContainer {
   padding: 20px;
@@ -61,5 +61,3 @@
   height: 140px;
   border: 2px solid #b98c04;
 }
-
-/* Lägg till önskad styling för övriga element om det behövs */
