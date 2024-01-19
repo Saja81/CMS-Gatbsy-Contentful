@@ -17,9 +17,9 @@ body {
 #cvHeader p {
   color: #b98c04;
   font-style: italic;
-  position: absolute; /* Lägg till absolut positionering på p-elementet */
-  top: 1%; /* Justera top-värde efter behov */
-  right: 92%; /* Justera left-värde efter behov */
+  position: absolute;
+  top: 1%;
+  right: 92%;
 }
 
 #cvMain {
@@ -85,7 +85,6 @@ body {
 }
 
 .cvArbeteContainer {
-  /* border: 1px solid #ddd; */
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
@@ -116,8 +115,6 @@ body {
 } */
 
 @media (max-width: 768px) {
-  /* Add styles for medium screen size and below */
-
   #cvMain {
     flex-direction: column;
   }
@@ -133,13 +130,13 @@ body {
 
   #cvAside,
   #cvArticles {
-    margin: 5% 3% 2% 3%; /* Adjust margins for better spacing in a single column layout */
+    margin: 5% 3% 2% 3%;
   }
 
   #cvHeader p {
-    position: static; /* Change the position to static for normal flow */
-    text-align: center; /* Center the text */
-    margin-top: 1%; /* Adjust margin as needed */
-    margin-right: 0; /* Reset right margin */
+    position: static;
+    text-align: center;
+    margin-top: 1%;
+    margin-right: 0;
   }
 }

@@ -1,5 +1,3 @@
-// CvHeaderSection.js
-
 import React from "react";
 import { useState } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -31,7 +29,7 @@ const CvWorkSection = ({ data }) => {
             {arbete.startdatum} - {arbete.slutdatum ?? "Nuvarande"}
           </p>
           <p>{arbete.subtitle}</p>
-          {/* Visa "Läs mer" / "Läs mindre" knapp baserat på state */}
+
           {showDescription[index] ? (
             <div>
               <p>

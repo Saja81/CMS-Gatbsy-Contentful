@@ -1,9 +1,6 @@
-// layout.js
-
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import "../styles/global.css";
-// import "../styles/layout.module.css";
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`

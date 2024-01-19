@@ -1,5 +1,3 @@
-// layout.js
-
 import React from "react";
 import { space } from "../styles/home.module.css";
 

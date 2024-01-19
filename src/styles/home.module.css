@@ -18,8 +18,8 @@
 
 #homeMainSection {
   display: flex;
-  justify-content: center; /* Centrera innehållet horisontellt */
-  align-items: center; /* Centrera innehållet vertikalt */
+  justify-content: center;
+  align-items: center;
   margin: 10%;
   gap: 10%;
 }
@@ -36,25 +36,6 @@
   display: flex;
   flex-direction: column;
 }
-
-/* #homeNav a {
-  text-decoration: none;
-
-  transition: color 0.3s, font-size 0.3s;
-}
-
-#homeNav a:hover {
-  color: silver;
-  font-size: 1.1em;
-} */
-
-/* .cvAsideContainer {
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(218, 196, 196, 0.747);
-  transition: box-shadow 0.3s ease;
-} */
 
 .profileImage {
   width: 140px;

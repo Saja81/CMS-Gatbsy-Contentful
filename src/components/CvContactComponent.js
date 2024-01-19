@@ -1,5 +1,3 @@
-// CvHeaderSection.js
-
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { cvAsideMain, cvAsideContainer } from "../styles/cv.module.css";

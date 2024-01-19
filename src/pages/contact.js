@@ -1,9 +1,7 @@
-import { graphql, Link } from "gatsby";
 import * as React from "react";
+import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Layout from "../components/Layout";
 import LayoutTwo from "../components/LayoutTwo";
 
 import {
@@ -15,8 +13,6 @@ import {
   cvAsideContainer,
   profileImage,
 } from "../styles/home.module.css";
-
-// import { cvAsideContainer, profileImage } from "../styles/cv.module.css";
 
 const Contact = ({ data }) => {
   const om = data.allContentfulOm.nodes[0];

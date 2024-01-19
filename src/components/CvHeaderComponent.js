@@ -1,6 +1,5 @@
-// CvHeaderSection.js
-
 import React from "react";
+
 import "../styles/cv.module.css";
 
 const CvHeaderSection = ({ kontakt }) => {

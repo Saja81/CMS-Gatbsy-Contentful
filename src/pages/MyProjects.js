@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
-import CategoryList from "./CategoryList";
+import Layout from "../components/Layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import CategoryList from "./CategoryList";
 
 import {
   card,
@@ -63,7 +63,7 @@ const Projects = ({ data }) => {
               >
                 {project.lnk}
               </a>
-              {/* Enligt projektets krav ska det finnas en länk som genereras dynamiskt. Jag har ingen länk till projektet och jag vill helle inte att detta ska synas. Därför har jag lagt hidden på detta element men jag visar att jag behärska tekniken */}
+              {/* Enligt projektets krav ska det finnas en länk som genereras dynamiskt. Jag har ingen länk till projektet och jag vill helle inte att detta ska synas. Därför har jag lagt hidden på detta element men jag visar att jag behärskar tekniken */}
             </div>
           </Link>
         ))}

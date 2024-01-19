@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Index } from "elasticlunr";
 import { Link } from "gatsby";
+import { Index } from "elasticlunr";
 
-// Search component
 const Search = ({ searchIndex }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [index, setIndex] = useState(null);
 
   useEffect(() => {
-    // Load the index when the component mounts
     if (!index) {
       try {
         setIndex(Index.load(searchIndex));

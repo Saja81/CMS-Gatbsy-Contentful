@@ -1,9 +1,7 @@
-import { graphql, Link } from "gatsby";
 import * as React from "react";
-import { Helmet } from "react-helmet";
+import { graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-// import { Link } from "gatsby";
-import Layout from "../components/Layout";
+import { Helmet } from "react-helmet";
 import LayoutTwo from "../components/LayoutTwo";
 import {
   homeMainSection,

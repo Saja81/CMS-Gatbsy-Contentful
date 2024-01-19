@@ -8,7 +8,6 @@
 .mainheader {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   align-items: center;
   gap: 50%;
 }
@@ -21,8 +20,6 @@ footer {
   align-items: center;
 }
 
-/* COLOR */
-
 header,
 footer {
   background-color: #242e38;
@@ -32,13 +29,6 @@ footer {
   color: #b98c04;
   margin-left: 10px;
 }
-
-/* nav a {
-  color: #b98c04;
-  flex-direction: row;
-  padding: 5px;
-  text-decoration: none;
-} */
 
 nav a {
   color: #b98c04;

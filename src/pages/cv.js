@@ -1,13 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Helmet } from "react-helmet";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import CvHeaderSection from "../components/CvHeaderComponent";
 import CvContactSection from "../components/CvContactComponent";
 import CvWorkSection from "../components/CvWorkComponent";
 import CvEducationSection from "../components/CvEducationComponent";
-import { Helmet } from "react-helmet";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   cvMainContainer,

@@ -1,9 +1,8 @@
-// ProjectPosts.js
 import React from "react";
-import { graphql } from "gatsby";
-import { card, projTitle, templateMain } from "../styles/projekt.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import { card, projTitle, templateMain } from "../styles/projekt.module.css";
 
 const Project = ({ data }) => {
   const project = data.contentfulProjekt;
@@ -28,12 +27,7 @@ const Project = ({ data }) => {
               />
             )}
           </div>
-          <a
-            href={project.lnk}
-            target="_blank"
-            rel="noopener noreferrer"
-            // style={{ display: "none" }}
-          >
+          <a href={project.lnk} target="_blank" rel="noopener noreferrer">
             {project.lnk}
           </a>
           {project.beskrivning && project.beskrivning.raw && (
