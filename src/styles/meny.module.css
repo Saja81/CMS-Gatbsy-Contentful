@@ -1,0 +1,35 @@
+.menyContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 100px 0 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menyContainer h2 {
+  margin-bottom: 16px;
+}
+
+.menyContainer > div {
+  margin-bottom: 16px;
+}
+
+.menyContainer h4 {
+  margin-bottom: 8px;
+}
+
+.menyContainer p {
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.menyContainer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menyContainer a {
+  text-decoration: none;
+  color: black;
+}
