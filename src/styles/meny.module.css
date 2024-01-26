@@ -1,7 +1,9 @@
+/* Lägg till dessa regler i din CSS-fil */
+
 .menyContainer {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 0 100px 0 100px;
+  padding: 0 20px; /* Justera detta baserat på ditt önskade mellanrum på sidorna */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,4 +34,50 @@
 .menyContainer a {
   text-decoration: none;
   color: black;
+}
+
+.veckoMeny {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Justera detta baserat på ditt önskade avstånd mellan meny-items */
+}
+
+/* Lägg till dessa regler i din CSS-fil */
+.menyItem {
+  width: calc(
+    20% - 16px
+  ); /* 20% bredd för varje meny-item, och subtrahera marginen för att hålla det inom 20% */
+  margin: 0 8px 20px 0; /* Justera detta baserat på ditt önskade mellanrum mellan meny-items */
+  border: 1px solid #ddd; /* Linje runt meny-item för card-effekt */
+  border-radius: 8px; /* Rundade hörn */
+  overflow: hidden; /* För att hantera överflödande innehåll */
+}
+
+.menyItem .meny-link {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menyItem h4 {
+  margin-bottom: 10px;
+}
+
+.menyItem p {
+  margin-bottom: 10px;
+}
+
+.menyItem img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media query för att justera bredden på meny-item på mindre skärmar om det behövs */
+@media (max-width: 768px) {
+  .veckoMeny .menyItem {
+    width: calc(
+      50% - 16px
+    ); /* 50% bredd för varje meny-item på mindre skärmar */
+  }
 }

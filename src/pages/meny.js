@@ -2,10 +2,9 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
-import { menyContainer } from "../styles/meny.module.css";
+import { menyContainer, veckoMeny, menyItem } from "../styles/meny.module.css";
 
 const Meny = ({ data }) => {
-  // Skapa en sorteringsfunktion baserad på siffrorna i post.dag
   const sorteringsfunktion = (a, b) => {
     const siffraA = parseInt(a.dag, 10);
     const siffraB = parseInt(b.dag, 10);
@@ -19,7 +18,6 @@ const Meny = ({ data }) => {
     return 0;
   };
 
-  // Sortera menyNodes med den nya sorteringsfunktionen
   const menyNodes = data.allContentfulMenyV1.nodes.sort(sorteringsfunktion);
 
   return (
@@ -30,22 +28,28 @@ const Meny = ({ data }) => {
       </Helmet>
       <div className={menyContainer}>
         <h2>Meny V.1</h2>
-        {menyNodes.map((post, index) => (
-          <div key={index} className="meny-item">
-            <Link to={`/meny/${post.slug}/`} className="meny-link">
-              <h4>{post.dag}</h4>
-
-              <p>{post.rtt}</p>
-              <div>
-                <img
-                  src={post.bild.file.url}
-                  alt="Bildbeskrivning"
-                  style={{ width: "100px", height: "100px" }}
-                />
-              </div>
-            </Link>
-          </div>
-        ))}
+        <div className={veckoMeny}>
+          {menyNodes.map((post, index) => (
+            <div key={index} className={menyItem}>
+              <Link to={`/meny/${post.slug}/`} className="meny-link">
+                <h4>{post.dag}</h4>
+                <p>{post.rtt}</p>
+                <div>
+                  <img
+                    src={post.bild.file.url}
+                    alt="Bildbeskrivning"
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      objectFit: "cover",
+                      borderRadius: "8px",
+                    }}
+                  />
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );
