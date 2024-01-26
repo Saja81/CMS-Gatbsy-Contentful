@@ -51,6 +51,11 @@
   border: 1px solid #ddd; /* Linje runt meny-item för card-effekt */
   border-radius: 8px; /* Rundade hörn */
   overflow: hidden; /* För att hantera överflödande innehåll */
+  display: flex; /* Använd flexbox */
+  flex-direction: column; /* Ställ in riktningen på flexbox till kolumn */
+  justify-content: center; /* Centrera innehållet vertikalt */
+  align-items: center; /* Centrera innehållet horisontellt */
+  /* padding: 10px; */
 }
 
 .menyItem .meny-link {
