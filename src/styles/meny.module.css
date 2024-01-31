@@ -55,7 +55,7 @@
   flex-direction: column; /* Ställ in riktningen på flexbox till kolumn */
   justify-content: center; /* Centrera innehållet vertikalt */
   align-items: center; /* Centrera innehållet horisontellt */
-  /* padding: 10px; */
+  /* padding: 5px; */
 }
 
 .menyItem .meny-link {

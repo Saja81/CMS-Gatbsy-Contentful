@@ -31,7 +31,7 @@ const Meny = ({ data }) => {
         <div className={veckoMeny}>
           {menyNodes.map((post, index) => (
             <div key={index} className={menyItem}>
-              <Link to={`/meny/${post.slug}/`} className="meny-link">
+              <Link to={`/menyv1/${post.slug}/`} className="meny-link">
                 <h4>{post.dag}</h4>
                 <p>{post.rtt}</p>
                 <div>
