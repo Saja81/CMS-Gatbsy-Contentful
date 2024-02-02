@@ -60,6 +60,11 @@ nav a {
   list-style-type: none; /* Ta bort punkterna från ul */
   display: flex;
 }
+@media (max-width: 650px) {
+  .nav-links-meny {
+    flex-direction: column;
+  }
+}
 
 .nav-links-meny li {
   margin-right: 2px; /* Lägg till lite mellanrum mellan varje länk */
