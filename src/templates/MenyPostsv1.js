@@ -1,14 +1,14 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
-import Layout from "../components/Layout";
+import LayoutThree from "../components/LayoutThree";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const MenyPost = ({ data }) => {
   const { dag, ingredienser, rtt, grSHr, lnk } = data.contentfulMenyV1; // Hämta data för den specifika menyposten
 
   return (
-    <Layout>
+    <LayoutThree>
       <Helmet>
         <title>{dag} - Din Sida Titel Här</title>
         {/* Lägg till eventuella meta-tagg beskrivningar eller andra SEO-relaterade taggar här */}
@@ -24,7 +24,7 @@ const MenyPost = ({ data }) => {
           <p>Recept inklusive bilder kommer från köket.se</p>
         </Link>
       </div>
-    </Layout>
+    </LayoutThree>
   );
 };
 
