@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import { menyContainer, veckoMeny, menyItem } from "../styles/meny.module.css";
+import LayoutThree from "../components/LayoutThree";
 
 const Meny = ({ data }) => {
   const sorteringsfunktion = (a, b) => {
@@ -21,7 +22,7 @@ const Meny = ({ data }) => {
   const menyNodes = data.allContentfulMenyV4.nodes.sort(sorteringsfunktion);
 
   return (
-    <Layout>
+    <LayoutThree>
       <Helmet>
         <title>Meny - Din Sida Titel Här</title>
         {/* Lägg till eventuella meta-tagg beskrivningar eller andra SEO-relaterade taggar här */}
@@ -51,7 +52,7 @@ const Meny = ({ data }) => {
           ))}
         </div>
       </div>
-    </Layout>
+    </LayoutThree>
   );
 };
 

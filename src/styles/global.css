@@ -28,6 +28,7 @@ footer {
 .logo {
   color: #b98c04;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 nav a {
@@ -53,6 +54,23 @@ nav a {
   flex-direction: row;
   padding: 5px;
   text-decoration: none;
+}
+
+.nav-links-meny {
+  list-style-type: none; /* Ta bort punkterna från ul */
+  display: flex;
+}
+
+.nav-links-meny li {
+  margin-right: 2px; /* Lägg till lite mellanrum mellan varje länk */
+}
+
+.nav-links-meny li:last-child {
+  margin-right: 0; /* Ingen marginal till det sista listelementet */
+}
+
+.nav-links-meny a {
+  text-decoration: none; /* Ta bort standard understrykning */
 }
 
 footer p {

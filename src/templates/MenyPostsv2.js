@@ -1,11 +1,11 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const MenyPost = ({ data }) => {
-  const { dag, ingredienser, rtt, grSHr } = data.contentfulMenyV2; // Hämta data för den specifika menyposten
+  const { dag, ingredienser, rtt, grSHr, lnk } = data.contentfulMenyV2; // Hämta data för den specifika menyposten
 
   return (
     <Layout>
@@ -20,6 +20,9 @@ const MenyPost = ({ data }) => {
         <div>{documentToReactComponents(JSON.parse(ingredienser.raw))}</div>
         <h3>Gör så här</h3>
         <div>{documentToReactComponents(JSON.parse(grSHr.raw))}</div>
+        <Link to={lnk} target="_blank" rel="noopener noreferrer">
+          <p>Recept inklusive bilder kommer från köket.se</p>
+        </Link>
       </div>
     </Layout>
   );
