@@ -13,10 +13,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const menyTemplateV2 = path.resolve("./src/templates/MenyPostsv2.js");
 
   // // Define the template for individual menyv2 posts
-  // const menyTemplateV3 = path.resolve("./src/templates/MenyPostsv2.js");
+  const menyTemplateV3 = path.resolve("./src/templates/MenyPostsv3.js");
 
   // // Define the template for individual menyv2 posts
-  // const menyTemplateV4 = path.resolve("./src/templates/MenyPostsv2.js");
+  const menyTemplateV4 = path.resolve("./src/templates/MenyPostsv4.js");
 
   // Fetch data from Contentful for projects
   const projectsResult = await graphql(`
@@ -130,71 +130,71 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   }
 
-  // // Fetch data from Contentful for menyv3 posts
-  // const menyResultV3 = await graphql(`
-  //   {
-  //     allContentfulMenyV3 {
-  //       nodes {
-  //         dag
-  //         slug
-  //       }
-  //     }
-  //   }
-  // `);
+  // Fetch data from Contentful for menyv3 posts
+  const menyResultV3 = await graphql(`
+    {
+      allContentfulMenyV3 {
+        nodes {
+          dag
+          slug
+        }
+      }
+    }
+  `);
 
-  // if (menyResultV3.errors) {
-  //   reporter.panicOnBuild(
-  //     `There was an error loading your Contentful menyv3 posts`,
-  //     menyResultV3.errors
-  //   );
-  //   return;
-  // }
+  if (menyResultV3.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your Contentful menyv3 posts`,
+      menyResultV3.errors
+    );
+    return;
+  }
 
-  // const menyPostsV3 = menyResultV3.data.allContentfulMenyV3.nodes;
+  const menyPostsV3 = menyResultV3.data.allContentfulMenyV3.nodes;
 
-  // if (menyPostsV3.length > 0) {
-  //   menyPostsV3.forEach((post) => {
-  //     createPage({
-  //       path: `/menyv3/${post.slug}/`,
-  //       component: menyTemplateV3,
-  //       context: {
-  //         slug: post.slug,
-  //       },
-  //     });
-  //   });
-  // }
+  if (menyPostsV3.length > 0) {
+    menyPostsV3.forEach((post) => {
+      createPage({
+        path: `/menyv3/${post.slug}/`,
+        component: menyTemplateV3,
+        context: {
+          slug: post.slug,
+        },
+      });
+    });
+  }
 
   // Fetch data from Contentful for menyv3 posts
-  // const menyResultV4 = await graphql(`
-  //   {
-  //     allContentfulMenyV4 {
-  //       nodes {
-  //         dag
-  //         slug
-  //       }
-  //     }
-  //   }
-  // `);
+  const menyResultV4 = await graphql(`
+    {
+      allContentfulMenyV4 {
+        nodes {
+          dag
+          slug
+        }
+      }
+    }
+  `);
 
-  // if (menyResultV4.errors) {
-  //   reporter.panicOnBuild(
-  //     `There was an error loading your Contentful menyv4 posts`,
-  //     menyResultV4.errors
-  //   );
-  //   return;
-  // }
+  if (menyResultV4.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your Contentful menyv4 posts`,
+      menyResultV4.errors
+    );
+    return;
+  }
 
-  // const menyPostsV4 = menyResultV4.data.allContentfulMenyV4.nodes;
+  const menyPostsV4 = menyResultV4.data.allContentfulMenyV4.nodes;
 
-  // if (menyPostsV4.length > 0) {
-  //   menyPostsV4.forEach((post) => {
-  //     createPage({
-  //       path: `/menyv4/${post.slug}/`,
-  //       component: menyTemplateV4,
-  //       context: {
-  //         slug: post.slug,
-  //       },
-  //     });
-  //   });
-  // }
+  if (menyPostsV4.length > 0) {
+    menyPostsV4.forEach((post) => {
+      createPage({
+        path: `/menyv4/${post.slug}/`,
+        component: menyTemplateV4,
+        context: {
+          slug: post.slug,
+        },
+      });
+    });
+  }
 };
