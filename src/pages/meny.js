@@ -12,7 +12,7 @@ export default function meny() {
         }}
         className={hideOnDesktop}
       >
-        Vad faan ska vi äta till mat?
+        Vad ska vi äta idag? <p>(Den eviga frågan)</p>
       </h1>
       <h3
         style={{
@@ -21,7 +21,7 @@ export default function meny() {
         }}
         className={hideOnMobile}
       >
-        Vad faan ska vi äta till mat?
+        Vad ska vi äta idag? <p>(Den eviga frågan)</p>
       </h3>
     </LayoutThree>
   );
