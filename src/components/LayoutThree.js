@@ -9,6 +9,7 @@ export default function Layout({ children }) {
         <Link to="/meny" className="logo">
           <h1>Meny</h1>
         </Link>
+
         <nav>
           <ul className="nav-links-meny">
             <li>

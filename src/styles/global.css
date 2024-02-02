@@ -105,3 +105,22 @@ footer p {
     gap: 40%;
   }
 }
+
+/* meny.module.css */
+.hideOnMobile {
+  display: block; /* Visa elementet på skärmar under 650px */
+}
+
+.hideOnDesktop {
+  display: none; /* Dölj elementet på skärmar över 650px */
+}
+
+@media (min-width: 651px) {
+  .hideOnMobile {
+    display: none; /* Dölj elementet på skärmar över 650px */
+  }
+
+  .hideOnDesktop {
+    display: block; /* Visa elementet på skärmar över 650px */
+  }
+}
