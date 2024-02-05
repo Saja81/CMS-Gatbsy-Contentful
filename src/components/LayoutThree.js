@@ -7,10 +7,26 @@ export default function Layout({ children }) {
     <body>
       <header className="mainheader">
         <Link to="/meny" className="logo">
-          <h1>Meny</h1>
+          <p>Meny</p>
         </Link>
 
         <nav>
+          <ul className="nav-links-meny">
+            <li>
+              <Link to="/menyv1">V.1</Link>
+            </li>
+            <li>
+              <Link to="/menyv2">V.2</Link>
+            </li>
+            <li>
+              <Link to="/menyv3">V.3</Link>
+            </li>
+            <li>
+              <Link to="/menyv4">V.4</Link>
+            </li>
+          </ul>
+        </nav>
+        {/* <nav>
           <ul className="nav-links-meny">
             <li>
               <Link to="/menyv1">Vecka 1</Link>
@@ -25,7 +41,7 @@ export default function Layout({ children }) {
               <Link to="/menyv4">Vecka 4</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </header>
       <main>{children}</main>
       <footer>
